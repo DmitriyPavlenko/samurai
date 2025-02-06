@@ -1,6 +1,6 @@
 
 
-const Dialogs = (props) => {
+const Dialogs = () => {
     return (
         <div>
             Dialogs
