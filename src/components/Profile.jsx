@@ -1,12 +1,12 @@
 import s from './Profile.module.css'
 import MyPosts from "./Profile/MyPosts/MyPosts";
+import ProfileInfo from "./Profile/ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
         <div>
-            <img src="https://piligrim.ua/wp-content/uploads/2021/08/Kendwa.jpg" alt=""/>
-            <div>ava+description</div>
-            <MyPosts hey='yo'/>
+            <ProfileInfo/>
+            <MyPosts/>
         </div>
     )
 }
