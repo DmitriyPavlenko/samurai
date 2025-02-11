@@ -3,10 +3,12 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-    let postsData = [
+    let posts = [
         {id: 1, message: 'How are you?', likesCount: 12},
         {id: 2, message: 'privet', likesCount: 11}
     ]
+
+    let postsElements = posts.map((p, index) => <Post message={p.message} key={index} likesCount={p.likesCount}/>)
 
     return (
         <div className={s.posts}>
@@ -17,8 +19,7 @@ const MyPosts = (props) => {
                 </div>
                 <button>Add Post</button>
             </div>
-            <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
-            <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
+            {postsElements}
         </div>
     )
 }
