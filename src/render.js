@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import {addPost} from "./components/redux/state";
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 export let rerenderEntireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
         <React.StrictMode>
             <App state={state} addPost={addPost}/>
