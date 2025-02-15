@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {updateNewPostText} from "./components/redux/state";
 
 const App = (props) => {
 
