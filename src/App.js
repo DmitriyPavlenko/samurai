@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {updateNewPostText} from "./components/redux/state";
 
 const App = (props) => {
 
@@ -15,10 +16,13 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Routes>
                         <Route path="/profile" element={<Profile
-                            state={props.state.profilePage}
-                            addPost={props.addPost}/>}/>
+                            profilePage={props.state.profilePage}
+                            addPost={props.addPost}
+                            updateNewPostText={props.updateNewPostText}
+                        />}/>
                         <Route path="/dialogs/*" element={<Dialogs
-                            state={props.state.dialogsPage}/>}/>
+                            state={props.state.dialogsPage}
+                        />}/>
                     </Routes>
                 </div>
             </div>
